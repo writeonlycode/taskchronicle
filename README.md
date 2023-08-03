@@ -1,48 +1,119 @@
-# Supabase Starter
+# Task Chronicle
 
-This starter configures Supabase Auth to use cookies, making the user's session available throughout the entire Next.js app - Client Components, Server Components, Route Handlers, Server Actions and Middleware.
+**Task Chronicle** is a user-friendly time tracking application designed to
+assist individuals in efficiently logging and managing their working hours. The
+application will be developed using Next.js, Tailwind CSS, chadcn/ui, and
+Supabase. With a clean and intuitive interface, **Task Chronicle** aims to
+streamline time tracking and enhance productivity with the inclusion of a
+Pomodoro technique.
 
-## Deploy your own
+## Objective:
 
-The Vercel deployment will guide you through creating a Supabase account and project. After installation of the Supabase integration, all relevant environment variables will be set up so that the project is usable immediately after deployment 🚀
+The primary objective of **Task Chronicle** is to provide individuals with a
+simple and effective tool to monitor and analyze their time usage, help them
+stay focused and productive using the Pomodoro technique, and optimize their
+daily routines.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-supabase&project-name=nextjs-with-supabase&repository-name=nextjs-with-supabase&integration-ids=oac_jUduyjQgOyzev1fjrW83NYOv)
+## Features of the MVP:
 
-## How to use
+1. **User Authentication:** Users can register and log in securely to their
+   **Task Chronicle** accounts. Forgot password functionality will be
+   implemented for password retrieval.
 
-1. Create a [new Supabase project](https://database.new)
-1. Run `npx create-next-app -e with-supabase` to create a Next.js app using the Supabase Starter template
-1. Use `cd` to change into the app's directory
-1. Run `npm install` to install dependencies
-1. Rename `.env.local.example` to `.env.local` and update the values for `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` from [your Supabase project's API settings](https://app.supabase.com/project/_/settings/api)
-1. Run `npm run dev` to start the local development server
+2. **Time Entry:** Users can manually log their working hours by specifying
+   start and end times for each activity. A timer feature will allow users to
+   track time actively while they work on tasks.
 
-> Check out [the docs for Local Development](https://supabase.com/docs/guides/getting-started/local-development) to also run Supabase locally.
+3. **Pomodoro Timer:** A dedicated Pomodoro timer will be available to help
+   users stay focused and manage their work and break sessions effectively.
 
-### Create a Supabase client
+4. **Project and Task Management:** Users can create projects and define tasks
+   under each project to organize their time efficiently.
 
-Check out the [`/app/_examples`](./app/_examples/) folder for an example of creating a Supabase client in:
+5. **Time Summary and Reports:** **Task Chronicle** will display a summary of
+   logged hours for each project and task. Basic reports, such as weekly or
+   monthly time breakdowns, will be available for users to analyze their time
+   utilization.
 
-- [Client Components](./app/_examples/client-component/page.tsx)
-- [Server Components](./app/_examples/server-component/page.tsx)
-- [Route Handlers](./app/_examples/route-handler/route.ts)
-- [Server Actions](./app/_examples/server-action/page.tsx)
+6. **Dashboard:** A personalized dashboard will provide users with an overview
+   of their logged hours, active projects, and Pomodoro sessions.
 
-### Create `todo` table and seed with data (optional)
+7. **Profile Settings:** Users can update their profiles, including their name,
+   email, and profile picture.
 
-Navigate to [your project's SQL Editor](https://app.supabase.com/project/_/sql), click `New query`, paste the contents of the [init.sql](./supabase/migrations/20230618024722_init.sql) file and click `RUN`.
+## Technical Stack
 
-This will create a basic `todos` table, enable Row Level Security (RLS), and write RLS policies enabling `select` and `insert` actions for `authenticated` users.
+Sure! Here's an itemized list of the tech stack with descriptions of each technology used:
 
-To seed your `todos` table with some dummy data, run the contents of the [seed.sql](./supabase/seed.sql) file.
+1. **Next.js:** Next.js is a popular and powerful React framework for building
+   modern web applications. It provides server-side rendering (SSR), static
+   site generation (SSG), and client-side rendering capabilities, offering a
+   seamless development experience with improved performance and SEO benefits.
 
-## Feedback and issues
+2. **SWR (Stale-While-Revalidate):** SWR is a lightweight data-fetching library
+   for React applications. It helps in managing and caching data from the
+   server efficiently, providing a responsive user experience by revalidating
+   stale data in the background when needed. SWR integrates seamlessly with
+   Next.js, making it an excellent choice for fetching and managing data in the
+   application.
 
-Please file feedback and issues over on the [Supabase GitHub org](https://github.com/supabase/supabase/issues/new/choose).
+3. **Tailwind CSS:** Tailwind CSS is a utility-first CSS framework that allows
+   developers to build efficient and responsive user interfaces rapidly. It
+   provides a collection of pre-built utility classes that can be easily
+   combined to style HTML elements, making it highly customizable and
+   straightforward to maintain.
 
-## More Supabase examples
+4. **ChadCN UI:** ChadCN UI is a collection of reusable components built using
+   Radix UI and Tailwind CSS. It offers developers a set of ready-to-use
+   components that can be copied and pasted directly into their projects. With
+   ChadCN UI, you can leverage the power of Radix UI and Tailwind CSS to create
+   consistent and visually appealing user interfaces.
 
-- [Next.js Subscription Payments Starter](https://github.com/vercel/nextjs-subscription-payments)
-- [Cookie-based Auth and the Next.js 13 App Router (free course)](https://youtube.com/playlist?list=PL5S4mPUpp4OtMhpnp93EFSo42iQ40XjbF)
-- [Supabase Auth and the Next.js App Router](https://github.com/supabase/supabase/tree/master/examples/auth/nextjs)
-- [Next.js Auth Helpers Docs](https://supabase.com/docs/guides/auth/auth-helpers/nextjs)
+5. **Supabase:** Supabase is an open-source backend-as-a-service (BaaS)
+   platform that provides a set of tools and APIs for building serverless
+   applications quickly. It combines features like database management
+   (PostgreSQL), authentication, and real-time subscriptions, making it an
+   excellent choice for powering the backend of your application.
+
+**Development Timeline:**
+
+1. [ ] **Week 1: Project Setup and User Authentication**: Set up the Next.js
+   project and integrate Tailwind CSS for styling. Implement user registration,
+   login, and forgot password functionality using Supabase for authentication.
+
+2. [ ] **Week 2: Time Entry and Timer Feature:** Create interfaces for manual
+   time entry, allowing users to log hours for different activities. Implement
+   a timer feature to allow users to track time actively as they work on tasks.
+
+3. [ ] **Week 3: Project and Task Management:** Design and develop project
+   creation and task assignment features. Users should be able to organize
+   their time effectively by defining tasks under each project.
+
+4. [ ] **Week 4: Pomodoro Timer:** Integrate a Pomodoro timer functionality
+   into the application. Allow users to set work and break durations for their
+   Pomodoro sessions.
+
+5. [ ] **Week 5: Time Summary and Basic Reports** Build a user interface to
+   display time summaries for each project and task. Implement basic reports
+   like weekly or monthly time breakdowns for users to analyze their
+   productivity.
+
+6. [ ] **Week 6: Dashboard and Profile Settings** Develop a personalized
+   dashboard to provide users with an overview of their logged hours, active
+   projects, and Pomodoro sessions.  Implement profile settings to allow users
+   to update their information.
+
+7. [ ] **Week 7: Testing and Refinement:** Thoroughly test the application to
+   identify and resolve any bugs or issues. Gather feedback from early users
+   and make necessary improvements based on their input.
+
+## Conclusion
+
+**Task Chronicle** aims to deliver a straightforward and efficient time
+tracking experience for individuals while integrating the Pomodoro technique to
+enhance productivity and focus. By focusing on essential features, including
+the Pomodoro timer, and utilizing Next.js, Tailwind CSS, ChadUI, and Supabase,
+the application will provide users with a seamless and visually appealing
+interface. The development timeline ensures a timely delivery of the MVP, and
+post-MVP launch, we can continue to improve **Task Chronicle** based on user
+feedback and feature enhancements.
